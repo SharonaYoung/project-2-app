@@ -2,8 +2,11 @@ const divideAndFloor = require('./divideAndFloor');
 
 describe('DivideAndFloor function', () => {
   it('should divide the numbers and out put results in an object', () => {
-    expect(divideAndFloor(15,5)).toEqual({result: 3, remainder: 0, dividesEvenly: false});
+    expect(divideAndFloor(15, 5)).toEqual({result: 3, remainder: 0, dividesEvenly: false});
   });
+  it('should display if there is a remainder', () => {
+    expect(divideAndFloor(36, 8)).toEqual({result: 4, remainder: 4, dividesEvenly: false});
+  })
   it('should throw an error if num1 or num2 is missing ', () => {
     expect(() => divideAndFloor(12)).toThrow(/^A number is missing$/);
   });
